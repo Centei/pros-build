@@ -98,7 +98,7 @@ fi
 
 # Actual build
 start_build_time=$SECONDS
-make quick $make_args | tee $STD_OUTPUT
+pros build-compile-commands $make_args | tee $STD_OUTPUT
 make_exit_code=${PIPESTATUS[0]}
 build_time=$((SECONDS - $start_build_time))
 
