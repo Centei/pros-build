@@ -77,7 +77,8 @@ else
 fi
 echo "Postfix after setting: $postfix"
 
-name="$library_name@$postfix"
+#name="$library_name@$postfix"
+name="artifact"
 echo "name=$name" >>"$GITHUB_OUTPUT"
 echo "Name found: $name"
 
@@ -98,7 +99,7 @@ fi
 
 # Actual build
 start_build_time=$SECONDS
-pros build-compile-commands $make_args | tee $STD_OUTPUT
+pros build-compile-commands -- $make_args | tee $STD_OUTPUT
 make_exit_code=${PIPESTATUS[0]}
 build_time=$((SECONDS - $start_build_time))
 
