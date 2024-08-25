@@ -78,7 +78,7 @@ fi
 echo "Postfix after setting: $postfix"
 
 #name="$library_name@$postfix"
-name="artifact"
+name=compile_commands
 echo "name=$name" >>"$GITHUB_OUTPUT"
 echo "Name found: $name"
 
